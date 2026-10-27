@@ -98,6 +98,7 @@ def remove_unary_plus(expression: str) -> str:
 
 
 def is_valid_expression(expression: str) -> bool:
+    expression = expression.replace(" ", '')
     return (
         is_valid_equal(expression) and
         operands_are_binary(expression) and
